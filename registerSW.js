@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/firebase-example-ms4065/sw.js', { scope: '/firebase-example-ms4065/' })})}
