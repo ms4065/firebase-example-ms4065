@@ -1,6 +1,6 @@
 # Firebase Example
 
-https://ms4065.github.io/firebase-example-m4065/
+https://ms4065.github.io/firebase-example-ms4065/
 
 ### Development
 
