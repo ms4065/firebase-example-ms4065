@@ -1,7 +1,10 @@
+import { Affix } from "@mantine/core";
+import { Box } from "@mui/material";
 import { collection, limit, orderBy, query } from "firebase/firestore";
 import { useFirestore, useFirestoreCollectionData } from "reactfire";
-import Form from "./Form";
-import Messages from "./Messages";
+import Form from './Form';
+import Messages from './Messages';
+
 
 export default function Channel() {
   const firestore = useFirestore();
@@ -17,13 +20,17 @@ export default function Channel() {
   });
 
   return (
-    <div>
+    <Box sx={{marginTop:3}}>
       {status === "loading" ? (
         <span>loading...</span>
       ) : (
         <Messages messages={messages} />
       )}
+      <br />
+      <br />
+      <Affix position={{ bottom: 20, left: 20, width: "75%"  }}>
       <Form messagesCollection={messagesCollection} />
-    </div>
+      </Affix>
+    </Box>
   );
 }
